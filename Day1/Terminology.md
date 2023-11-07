@@ -36,14 +36,14 @@ Acknowledgement, veri yazma işleminde producer’a bir başka onay verme seçen
 
 -   **acks=0:** hic bekleme
 -   **acks=1:** sadece lideri bekle
--   **acks=all:** tum brokerlari bekle
+-   **acks=all (-1):** tum in-sync (ISR) brokerlari bekle
 ![Kafka Ecosystem](https://www.conduktor.io/kafka/_next/image/?url=https://images.ctfassets.net/o12xgu4mepom/6TdnM9oVflXLhWBSicN58s/1b13dd58a82f853dae39d07f72e0b9c2/Kafka_Cluster__-_Fundamentals.png&w=1920&q=75)
 
 |        ACKS     |     Gecikme (Latency)   |   Verimlilik (Throughput)   |     Devamlılık - Sağlamlık (Durability)        |
 | --------------- | ------------------------| --------------------------- | -----------------------------------------------|
 |         0       |       Düşük (Low)       |       Yüksek (High)         |      Garanti Edilmez (No Guarantee)            |
 |         1       |     Orta (Medium)       |        Orta (Medium)        |       Sadece Liderler (Leaders Only)           |   
-|       All       |       Yüksek (High)     |          Düşük (Low)        |      Tüm Liderler ve Kopyalar (All Leaders and All Replicas)      |
+|      All (-1)   |       Yüksek (High)     |          Düşük (Low)        |      Tüm Liderler ve Kopyalar (All Leaders and All Replicas)      |
 
 **6. Consumer (Tüketici) ve Consumer Groups (Tüketici Grupları)**
 Bir consumer, topic üzerinden verileri istedikleri herhangi bir offset noktasından okur veya tüketir diyebiliriz :). Ayrıca consumer, verileri hangi broker(lar)dan okuması gerektiğini bilir ve aynı anda birden vazla brokerdan verileri okuyabilir.
