@@ -16,14 +16,17 @@ Kafka’da  **Topic (Konu)**  kelimesi belirli bir veri akışını depolamak ve
 
 **2. Partitions (Bölümler)**
 Bir topic, kendisinin bölümleri olacak şekilde birkaç bölüme bir sıra ile ayrılır. Bu neden bir topic oluştururken bölüm sayısını belirtmemiz beklenir. Her bir mesaj  **offset**  olarak adlandırılan, artımlı bir kimliğe sahip olur. Offset değerlerinin sırası topic genelinde değil de bölüm içinde geçerli olmakla birlikte bir bölüm sonsuz sayıda offset’e sahip olabilmektedir. Bir bölüme yazılan veriler değiştirilemezdir **(immutable)**. Bunu ancak Kafka yapabilir.
+
 ![1Topic, 4Partitions, 2Producers](https://miro.medium.com/v2/resize:fit:720/format:webp/1*f-CJRgeykF2HYEWElTBDBg.png)
 
 **3. Brokers (Aracılar)**
 Bir Kafka Cluster, brokers veya Kafka Brokers olarak bilinen bir veya birden fazla sunucudan oluşmaktadır. İstemcilerden gelen tüm istekleri işler ve cluster içinde çoğaltılan verileri tutar. Her bir broker bir tür veri içerir. Aşağıdaki görselde bir Kafka Cluster yapısı örneği gösterilmektedir.
+
 ![Kafka Cluster - Broker yapisi](https://miro.medium.com/v2/resize:fit:720/format:webp/1*iw9jxZji1rDmKAEhIjJOuA.png)
 
 **4. Topic Replication**
 Bir Broker’ın bozulması sonucunda verilerin kaybolması gibi bir problem ortaya çıkacaktır. Kafka, veri kaybı durumunun yaşanmaması için bizlere bir Replication (Çoğaltma) özelliği sunar. Bunu da bir broker’da bulunan topicler için bir  **Çoğaltma Faktörü (Replication Factor)**  oluşturarak yapar.
+
 ![Replication Factor of 3](https://miro.medium.com/v2/resize:fit:720/format:webp/1*vXyhU_0S22UKNnTQufBBsg.png)
 
 **5. Producer (Üretici)**
