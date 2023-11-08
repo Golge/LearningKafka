@@ -56,7 +56,7 @@ vim ~/.bashrc
 ```bash
 PATH="$PATH:/your/path/to/your/kafka/bin"
 ```
-Example: PATH="$PATH:~/kafka_2.13-3.1.0/bin"
+Example: `export PATH="$PATH:~/kafka_2.13-3.1.0/bin"`
 
 Open a new terminal. Try running the command from any directory:
 ```bash
