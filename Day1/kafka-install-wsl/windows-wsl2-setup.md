@@ -39,9 +39,8 @@ wget https://archive.apache.org/dist/kafka/3.1.0/kafka_2.13-3.1.0.tgz
 tar -xvf kafka_2.13-3.1.0.tgz
 ```
 
-3. Move the folder & Open
-```bash 
-mv kafka_2.13-3.1.0 ~
+3. Go to kafka_2.13-3.1.0
+```bash
 cd kafka_2.13-3.1.0
 ```
 
