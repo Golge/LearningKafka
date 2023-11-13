@@ -41,7 +41,7 @@
 
 • VSCode https://code.visualstudio.com/
 
-• IntelliJ IDEA ( Community Edition ) https://code.visualstudio.com/
+• IntelliJ IDEA ( Community Edition ) https://www.jetbrains.com/idea/download/?section=windows
 
 • Java 11 JDK Corretto https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html
 
