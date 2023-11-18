@@ -37,5 +37,5 @@ kafka-console-producer.sh --bootstrap-server localhost:9092 --producer-property 
 # start another consumer part of the same group. See messages being spread
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic third_topic --group my-first-application
 
-# start another consumer part of a different group from beginning
+# start another consumer part of a different group from the beginning - run it twice to see offset commit behavior
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic third_topic --group my-second-application --from-beginning
