@@ -45,34 +45,34 @@ docker-compose -f zk-kafka-single-node-stack.yml up
 - github sayfasinda bulunan kodlar ile topic, producer ve consumer olusturalim. ( farkli terminallerde )
 
 ```bash
-docker exec -it kafka101 \                       
+docker exec -it kafka101 \
 kafka-topics \
 --create \
 --partitions 6 \
 --replication-factor 1 \
 --topic demo-topic \
---bootstrap-server kafka101:29092
+--bootstrap-server kafka101:9092
 ```
 
 ```bash
-docker exec -it kafka101 \                     
+docker exec -it kafka101 \
 kafka-producer-perf-test \
 --throughput 500 \
 --num-records 100000000 \
 --topic demo-topic \
---record-size 100 \              
---producer-props bootstrap.servers=kafka101:29092
+--record-size 100 \
+--producer-props bootstrap.servers=kafka101:9092
 ```
 
 ```bash
-docker exec -it kafka101 \                   
+docker exec -it kafka101 \
 kafka-consumer-perf-test \
 --messages 100000000 \
---timeout 1000000 \      
+--timeout 1000000 \
 --topic demo-topic \
---reporting-interval 1000 \      
---show-detailed-stats \                          
---bootstrap-server kafka101:29092
+--reporting-interval 1000 \
+--show-detailed-stats \
+--bootstrap-server kafka101:9092
 ```
 
 - localhost:3000 den grafana UI baglanalim. Yeni bir data source `http://prometheus:9090` olusturalim.  Yeni bir dashboard ekleyelim. dashboard ID: `14505`
